@@ -15,6 +15,9 @@ fi
 set -o vi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# Add local bin file
+export PATH=$HOME/bin:$PATH
+
 source "${ZDOTDIR:-$HOME}/.aliases.zsh"
 
 source ~/.zsh/git-prompt/zshrc.sh
