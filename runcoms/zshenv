@@ -29,6 +29,15 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
+# Term
+export TERM='xterm-256color'
+
+# Configuration
+export AWS_CONFIG_FILE='~/.aws/credentials'
+export JAVA_HOME='/usr/lib/jvm/java-7-openjdk-amd64/'
+export AWS_IAM_HOME='/usr/local/src/IAMCli-1.5.0/'
+source ~/.zshenv.secret
+
 #
 # Paths
 #

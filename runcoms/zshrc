@@ -13,7 +13,8 @@ fi
 # Customize to your needs...
 
 set -o vi
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 # Add local bin file
 export PATH=$HOME/bin:$PATH
@@ -24,3 +25,9 @@ ZSH_THEME_GIT_PROMPT_NOCACHE=true
 source ~/.zsh/git-prompt/zshrc.sh
 PROMPT='%F{cyan}${_prompt_sorin_pwd} %f$(git_super_status)%(!. %B%F{red}#%f%b.)${editor_info[keymap]} '
 RPROMPT=''
+
+chruby 2.1.2
+
+autoload -U bashcompinit
+bashcompinit
+source ~/.twig/twig-completion.bash
